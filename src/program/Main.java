@@ -24,7 +24,7 @@ public class Main {
         Computer homeComp = ComputerBuilder
                 .newComputerBuilder()
                 .vendor("Asus")
-                .model("RT12")
+                .model("RT123454365458980897hjkgydu")
                 //.cpu("Intel", "Core i5", 3.6, 4)
                 .ram("Corsair", "QTFD6", "DRRIII", 1333, 4)
                 .motherBoard("Gigabyte ", "ER543", "1151")
