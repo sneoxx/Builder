@@ -19,15 +19,23 @@ public class ComputerBuilder {
         return this;
     }
 
-    public ComputerBuilder cpu(String vendor, String model, double frequency, int core) {
-        Cpu homeCpu = new Cpu(vendor, model, frequency, core);
-        this.cpu = homeCpu;
+
+
+    public ComputerBuilder cpu(Cpu cpu) {
+        this.cpu = cpu;
         return this;
     }
 
+//    public ComputerBuilder cpu(String vendor, String model, double frequency, int core) {
+//        Cpu homeCpu = new Cpu(vendor, model, frequency, core);
+//        this.cpu = homeCpu;
+ //       return this;
+ //   }
+
     public ComputerBuilder ram(String vendor, String model, String ddr, int frequency, int volume) {
-        Ram homeRam = new Ram(vendor, model, ddr, frequency, volume);
-        this.ram = homeRam;
+        this.ram = new Ram(vendor, model, ddr, frequency, volume);
+        //Ram homeRam = new Ram(vendor, model, ddr, frequency, volume);
+        //this.ram = homeRam;
         return this;
     }
 
@@ -57,6 +65,9 @@ public class ComputerBuilder {
         return new ComputerBuilder();
     }
 
+    public void setCpu(Cpu cpu) {
+        this.cpu = cpu;
+    }
 
     public String getVendor() {
         return vendor;
@@ -86,3 +97,5 @@ public class ComputerBuilder {
         return videoCard;
     }
 }
+
+

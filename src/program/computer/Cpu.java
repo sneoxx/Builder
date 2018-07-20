@@ -32,6 +32,7 @@ public class Cpu {
         this.CpuSpecification = this.vendor + " " + this.model + " " + this.frequency + "*" + this.core;
     }
 
+
     public Cpu(String vendor, String model, double frequency, int core){
         this.vendor = vendor;
         this.model  = model;
@@ -39,6 +40,10 @@ public class Cpu {
         this.core = core;
         this.CpuSpecification = this.vendor + " " + this.model + " " + this.frequency + "*" + this.core;
     }
+
+    public Cpu getCpuStatic(Cpu xcpu) {
+        return xcpu;
+   }
 
     public Cpu(String vendor){
         this.vendor = vendor;
